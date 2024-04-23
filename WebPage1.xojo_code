@@ -100,7 +100,7 @@ Begin WebPage WebPage1
       FontSize        =   0.0
       Height          =   38
       Index           =   -2147483648
-      indicator       =   0
+      Indicator       =   0
       Italic          =   False
       Left            =   148
       LockBottom      =   False
@@ -111,7 +111,7 @@ Begin WebPage WebPage1
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   False
-      PanelIndex      =   0
+      PanelIndex      =   "0"
       Scope           =   0
       TabIndex        =   2
       TabStop         =   True
@@ -138,13 +138,13 @@ End
 		End Sub
 	#tag EndEvent
 	#tag Event
-		Sub ToolberMenuItemPressed(menuItem As ToolbarMenuItem)
-		  MessageBox(menuItem.Caption + " has been pressed")
+		Sub SearchTextChanged(search As String)
+		  Label2.Text = search
 		End Sub
 	#tag EndEvent
 	#tag Event
-		Sub SearchTextChanged(search As String)
-		  Label2.Text = search
+		Sub ToolbarMenuItemPressed(menuItem As ToolbarMenuItem)
+		  MessageBox(menuItem.Caption + " has been pressed")
 		End Sub
 	#tag EndEvent
 #tag EndEvents

@@ -60,7 +60,7 @@ Begin WebContainer CustomToolbar
          FontSize        =   24.0
          Height          =   60
          Index           =   -2147483648
-         Indicator       =   ""
+         Indicator       =   0
          Italic          =   False
          Left            =   20
          LockBottom      =   True
@@ -74,6 +74,7 @@ Begin WebContainer CustomToolbar
          Parent          =   "Rectangle1"
          Scope           =   2
          TabIndex        =   1
+         TabPanelIndex   =   0
          TabStop         =   True
          Text            =   "Title"
          TextAlignment   =   0
@@ -91,7 +92,7 @@ Begin WebContainer CustomToolbar
          Height          =   38
          Hint            =   "Search"
          Index           =   -2147483648
-         Indicator       =   ""
+         Indicator       =   0
          Left            =   100
          LockBottom      =   False
          LockedInPosition=   False
@@ -103,6 +104,7 @@ Begin WebContainer CustomToolbar
          Parent          =   "Rectangle1"
          Scope           =   2
          TabIndex        =   2
+         TabPanelIndex   =   0
          TabStop         =   True
          Text            =   ""
          Tooltip         =   ""
@@ -146,7 +148,7 @@ End
 #tag WindowCode
 	#tag Method, Flags = &h21
 		Private Sub ToolbarMenuItemPressed(menu As ToolbarMenu, menuItem As ToolbarMenuItem)
-		  RaiseEvent ToolberMenuItemPressed(menuItem)
+		  RaiseEvent ToolbarMenuItemPressed(menuItem)
 		End Sub
 	#tag EndMethod
 
@@ -160,7 +162,7 @@ End
 	#tag EndHook
 
 	#tag Hook, Flags = &h0
-		Event ToolberMenuItemPressed(menuItem As ToolbarMenuItem)
+		Event ToolbarMenuItemPressed(menuItem As ToolbarMenuItem)
 	#tag EndHook
 
 
